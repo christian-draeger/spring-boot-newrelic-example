@@ -1,0 +1,19 @@
+spring:
+  application.name: "workforce"
+  mvc.static-path-pattern: /api/**
+  output.ansi.enabled: detect
+
+server:
+  port: ${PORT:8080}
+  shutdown: graceful # k8s optimization --> try to graceful shutdown on pod restart
+  error:
+    include-binding-errors: always
+    include-message: always
+
+logging:
+  pattern.console: "%highlight(%.-1level) %date{HH:mm:ss.SSS} [%30.30logger] %msg%n"
+  level:
+    root: INFO
+    org.springframework.web: WARN
+    org.springframework.test: WARN
+    com.example: DEBUG
