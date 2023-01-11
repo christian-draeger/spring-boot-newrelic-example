@@ -22,3 +22,7 @@ The new relic license key is passed as environment variable to the docker contai
 ```
 
 :bulb: The project will [create some log entries](src/main/kotlin/com/example/app/LogOnApplicationReadyService.kt) on application start.
+
+## Good Reads
+* [official Spring-Boot logging docs](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.logging)
+* [official New Relic java APM agent docs](https://docs.newrelic.com/docs/logs/logs-context/java-configure-logs-context-all/)
